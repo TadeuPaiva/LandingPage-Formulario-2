@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #E5E5E5;
+}
+/*Faixa na parte superior da tela*/
+body::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 436px;
+  left: 0px;
+  top: -2px;
+  z-index: -1;
+  
+  background: #535971;
+}
+
+.page {
+  width: 750px;
+  margin: auto;
+}
+
+header {
+  width: 417px;
+  margin-top: 138px;
+  color: #FFFFFF;
+}
+
+header h1 {
+  font-family: 'Staatliches';
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.col-name {
+  display: flex;
+  width: 100%;
+  gap: 22px;
+}
+/*para que tenham o mesmo tamanho na pagina*/
+.col-name > div{
+  width: 50%;
+}
+
+form {
+  margin-top: 58px;
+  background: #FFFFFF;
+  min-height: 300px;
+  width: 750px;
+  border-radius: 20px 20px 0px 0px;
+
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+fieldset {
+  border: none;
+}
+/*orientacao e distanciamento dentro da caixa de formulario*/
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.fieldset-wrapper legend {
+  font-family: 'Staatliches';
+  font-size: 24px;
+  line-height: 34px;
+  color: #535971;
+}
+/*barra a baixo das legendas*/
+.legend-wrapper {
+  width: 100%;
+  border-bottom: 1px solid #E6E6F0;
+  padding-bottom: 16px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-family: 'Poppins';
+  font-size: 14px;
+  line-height: 24px;
+  color: #4E4958;
+  padding-top: 36px;
+  padding-bottom: 8px;
+}
+
+.input-wrapper label span {
+  font-family: 'Poppins';
+  font-size: 12px;
+  line-height: 20px;
+  color: #C1BCCC;
+  margin-left: 9px;
+}
+/*acessibilidade da orientacao da caixa*/
+.input-wrapper label span:hover {
+  color: #6d6c70;
+}
+/*caixa de preenchimento*/
+.input-wrapper input {
+  height: 56px;
+  border-radius: 8px;
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  padding: 0 20px;
+}
+
+.col-date {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+
+  margin-top: 8px;
+}
+/*deixando a data com um tamanho maior que o tempo*/
+.col-date > div:nth-child(1) {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.scheduling-wrapper > legend {
+  position: absolute;
+  margin-bottom: 8px;
+}
+
+footer {
+  background: #535971;
+  width: 750px;
+  height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 40px 64px;
+  margin-bottom: 50px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+footer button {
+  width: 608px;
+  height: 55px;
+  background: #FF5374;
+  border-radius: 20px;
+
+  font-family: 'Staatliches';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+/*acessibilidade do botao*/
+footer button:hover {
+  background: #f51541;
+}
+/*campos obrigatorios*/
+input:invalid {
+  border: 1px solid #f86a6a;
+}
